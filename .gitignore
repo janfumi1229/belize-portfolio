@@ -1,0 +1,20 @@
+# 依賴套件（npm install 會重新產生，不需要上傳）
+node_modules/
+.npm
+
+# Next.js 建置產出
+.next/
+out/
+
+# 環境變數（如果之後有密碼或 API key 放這裡，絕對不要上傳）
+.env
+.env.local
+.env.production
+
+# 系統檔
+.DS_Store
+Thumbs.db
+
+# 編輯器設定
+.vscode/
+*.log

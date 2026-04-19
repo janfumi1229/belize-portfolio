@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── 全域基礎樣式 ─────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-warm-white text-ink font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3 {
+    @apply font-serif;
+  }
+}
+
+/* ─── 可重複使用的元件樣式 ──────────────────────── */
+@layer components {
+  /* 頁面標題區塊 */
+  .page-header {
+    @apply pt-32 pb-16 px-6 max-w-6xl mx-auto;
+  }
+
+  /* 章節標題 */
+  .section-title {
+    @apply font-serif text-4xl md:text-5xl text-ink tracking-wide;
+  }
+
+  /* 章節副標題 */
+  .section-subtitle {
+    @apply font-sans text-ink-muted text-sm tracking-widest uppercase mt-2;
+  }
+
+  /* 內容容器 */
+  .content-container {
+    @apply max-w-6xl mx-auto px-6 py-12;
+  }
+
+  /* 卡片樣式 */
+  .card {
+    @apply bg-white rounded-2xl border border-border shadow-sm hover:shadow-md transition-all duration-300;
+  }
+
+  /* 標籤 */
+  .tag {
+    @apply inline-block text-xs font-sans px-3 py-1 rounded-full;
+  }
+}
+
+/* ─── Leaflet 地圖客製化 ──────────────────────── */
+.leaflet-container {
+  font-family: var(--font-inter), sans-serif;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+  border: 1px solid #E8E0D4;
+}
+
+.leaflet-popup-tip {
+  background: white !important;
+}
